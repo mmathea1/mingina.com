@@ -1,10 +1,11 @@
 # mingina.com
 This is my portfolio website.
-It contains:
-	- Bio
-	- Portfolio
-	- Socials
-	- Blog
+
+## Sitemap:
+- Bio
+- Portfolio
+- Socials
+- Blog
 
 ## Website Goals
 - Create a professional online presence

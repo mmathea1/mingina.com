@@ -1,7 +1,7 @@
 # mingina.com
 This is my portfolio website.
 
-## Sitemap:
+## Sitemap
 - Bio
 - Portfolio
 - Socials

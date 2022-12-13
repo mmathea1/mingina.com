@@ -3,5 +3,13 @@ This is my portfolio website.
 It contains:
 	- Bio
 	- Portfolio
-	- My social media links
+	- Socials
 	- Blog
+
+## Website Goals
+- Create a professional online presence
+- Showcase my work
+
+## Target Audience
+- Tech Recruiters
+- Clients for freelance work

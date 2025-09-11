@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
    <div>
-    <p>Mingina's Portfolio - Coming Soon</p>
+    <p>Mingina&apos;s Portfolio - Coming Soon</p>
     </div>
   );
 }

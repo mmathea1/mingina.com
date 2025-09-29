@@ -7,8 +7,16 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-   <div>
-    <p>Mingina&apos;s Portfolio - Coming Soon</p>
-    </div>
+   <main>
+    <nav>
+      <ol>
+        <li>Home</li>
+        <li>About</li>
+        <li>Portfolio</li>
+        <li>Blog</li>
+        <li>Contact</li>
+      </ol>
+    </nav>
+   </main>
   );
 }

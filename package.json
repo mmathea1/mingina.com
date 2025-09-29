@@ -10,6 +10,7 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "husky": "^9.1.7",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -26,6 +27,7 @@
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.4.0",
     "jiti": "^2.6.0",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4",
     "typescript": "^5",
     "typescript-eslint": "^8.45.0"

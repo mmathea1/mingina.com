@@ -144,16 +144,18 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="w-full border-t border-base-300 bg-neutral-700 text-neutral-content">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-3">
-          <aside className="flex items-center gap-3">
+          <aside className="flex items-center gap-2">
             <Image
               src={minginaLogoLight}
               alt="Mingina wordmark (light)"
               className="h-18 w-auto"
             />
+          </aside>
+          <div className="flex items-center gap-2">
             <p className="text-sm opacity-90">
               © {year} Mingina. All rights reserved.
             </p>
-          </aside>
+          </div>
 
           <div className="flex items-center gap-2">
             <SocialLink href={LINKS.twitter} label="Twitter / X">

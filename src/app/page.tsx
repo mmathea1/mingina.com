@@ -32,7 +32,7 @@ const LINKS = {
   github: "https://github.com/mmathea1",
   twitter: "https://x.com/mingina_mathea",
   linkedin: "https://ke.linkedin.com/in/minginam",
-  resumeRequest: "",
+  resumeRequest: "resumerequest@mingina.com",
 };
 
 function SocialLink({
@@ -58,51 +58,56 @@ function SocialLink({
 }
 
 export default function Home() {
+  const year = new Date().getFullYear();
+
   return (
-    <div className="flex items-center justify-center p-6 bg-base-200  min-h-screen">
-      <div className="w-full max-w-5xl rounded-3xl border border-base-300 bg-base-100 shadow-xl overflow-hidden">
-        <header className="flex items-center justify-between px-6 py-4 border-b border-base-300 bg-base-100">
-          <Link href={"/"} className="flex items-center gap-3">
-            <span className="inline-flex h-12 w-52 items-center justify-center">
-              <Image
-                src={minginaLogo}
-                alt="Mingina Logo"
-                width={400}
-                height={200}
-              />
-            </span>
+    <div className="min-h-dvh w-full bg-base-100 flex flex-col">
+      {/* <div className="h-6" /> */}
+
+      {/* HEADER */}
+      <header className="w-full border-b border-base-300 bg-base-100">
+        <div className="flex items-center justify-between px-6 py-3">
+          <Link href="/" className="flex items-center">
+            <Image
+              src={minginaLogo}
+              alt="Mingina wordmark"
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           <div className="flex items-center gap-2">
-            <span className="badge badge-ghost border-base-300 hidden md:inline-flex">
-              <Mail />
+            <span className="badge badge-ghost badge-sm border-base-300 hidden md:inline-flex gap-2">
+              <Mail className="h-3.5 w-3.5" />
               {LINKS.email}
             </span>
-            <span className="badge badge-ghost border-base-300 hidden md:inline-flex">
-              <MapPin />
+            <span className="badge badge-ghost badge-sm border-base-300 hidden md:inline-flex gap-2">
+              <MapPin className="h-3.5 w-3.5" />
               Nairobi, Kenya
             </span>
           </div>
-        </header>
+        </div>
+      </header>
 
-        <main className="px-6 py-12 md:py-16">
-          <div className="flex flex-col items-center text-center gap-6">
-            <div className="rounded-full border border-base-300 p-6 shadow-sm">
-              <Image
-                src={minginaIcon}
-                height={140}
-                width={140}
-                alt="Mingina Profile Picture"
-                priority
-              />
-            </div>
+      {/* MAIN - this forces footer to bottom */}
+      <main className="flex-1 w-full px-6 flex items-center justify-center">
+        <div className="flex flex-col items-center text-center gap-6 max-w-2xl">
+          <div className="rounded-full border border-base-300 p-6 shadow-sm">
+            <Image
+              src={minginaIcon}
+              height={140}
+              width={140}
+              alt="Mingina monogram"
+              priority
+            />
           </div>
-          <div className="space-y-3 items-center text-center mt-8 mb-6 flex flex-col">
+
+          <div className="space-y-3">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               Hi, I am Mingina
             </h1>
             <p className="text-lg md:text-xl opacity-80">Software Engineer</p>
-            <p className="max-w-xl text-sm md:text-base opacity-70 leading-relaxed">
+            <p className="text-sm md:text-base opacity-70 leading-relaxed">
               I like building reliable software that matters over time and
               evolves with use.
             </p>
@@ -111,62 +116,58 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
               className="btn btn-primary rounded-2xl"
-              href={`mailto:${LINKS.resumeRequest}?subject=Resume Request&body=Hi Mingina, I would like to request a copy of your resume.`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:${LINKS.email}?subject=Resume%20Request&body=Hi%20Mingina,%20I%20would%20like%20to%20request%20a%20copy%20of%20your%20resume.`}
             >
               <FileDown className="h-5 w-5" /> Request Resume
             </Link>
+
             <Link
               className="btn btn-outline rounded-2xl"
-              href={`mailto:${LINKS.email}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:${LINKS.email}?subject=Hello%20Mingina`}
             >
-              <Mail className="w-5 h-5" /> Email Me
+              <Mail className="h-5 w-5" /> Email Me
             </Link>
-            <SocialLink href={LINKS.twitter} label="Follow me on Twitter">
-              <Twitter size={24} />
+
+            <SocialLink href={LINKS.twitter} label="Twitter / X">
+              <Twitter size={22} />
             </SocialLink>
-            <SocialLink href={LINKS.github} label="Follow me on GitHub">
-              <Github size={24} />
+            <SocialLink href={LINKS.github} label="GitHub">
+              <Github size={22} />
             </SocialLink>
-            <SocialLink
-              href={LINKS.linkedin}
-              label="Connect with me on LinkedIn"
-            >
-              <Linkedin size={24} />
+            <SocialLink href={LINKS.linkedin} label="LinkedIn">
+              <Linkedin size={22} />
             </SocialLink>
           </div>
-        </main>
+        </div>
+      </main>
 
-        <footer className="footer sm:footer-horizontal bg-neutral-700 text-neutral-content flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-base-300">
-          <aside className="grid-flow-col items-center text-neutral-content">
+      {/* FOOTER */}
+      <footer className="w-full border-t border-base-300 bg-neutral-700 text-neutral-content">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-3">
+          <aside className="flex items-center gap-3">
             <Image
-              className=" "
               src={minginaLogoLight}
-              alt="Mingina Logo"
-              width={80}
-              height={80}
+              alt="Mingina wordmark (light)"
+              className="h-18 w-auto"
             />
-            <p>© {new Date().getFullYear()} Mingina. All rights reserved.</p>
+            <p className="text-sm opacity-90">
+              © {year} Mingina. All rights reserved.
+            </p>
           </aside>
-          <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-            <SocialLink href={LINKS.twitter} label="Follow me on Twitter">
+
+          <div className="flex items-center gap-2">
+            <SocialLink href={LINKS.twitter} label="Twitter / X">
               <Twitter size={18} />
             </SocialLink>
-            <SocialLink href={LINKS.github} label="Follow me on GitHub">
+            <SocialLink href={LINKS.github} label="GitHub">
               <Github size={18} />
             </SocialLink>
-            <SocialLink
-              href={LINKS.linkedin}
-              label="Connect with me on LinkedIn"
-            >
+            <SocialLink href={LINKS.linkedin} label="LinkedIn">
               <Linkedin size={18} />
             </SocialLink>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   );
 }

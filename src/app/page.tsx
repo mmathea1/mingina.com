@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import minginaLogo from "../../public/images/wordmark.svg";
+import minginaLogo from "../../public/images/wordmark-black.svg";
+import minginaLogoLight from "../../public/images/wordmark-white.png";
 import minginaIcon from "../../public/images/monogram.svg";
 import {
   FileDown,
@@ -140,10 +141,10 @@ export default function Home() {
         </main>
 
         <footer className="footer sm:footer-horizontal bg-neutral-700 text-neutral-content flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-base-300">
-          <aside className="grid-flow-col items-center">
+          <aside className="grid-flow-col items-center text-neutral-content">
             <Image
-              className="text-neutral-300"
-              src={minginaLogo}
+              className=" "
+              src={minginaLogoLight}
               alt="Mingina Logo"
               width={80}
               height={80}

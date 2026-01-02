@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex items-center m-auto justify-between py-10 flex-col">
-      <main className="container mx-auto items-center">
+    <div className="flex items-center m-auto justify-between py-10 flex-col container mx-auto min-h-screen">
+      <main className=" mx-auto items-center">
         <div className="navbar bg-base-100 shadow-sm">
           <div className="flex-1">
             <Link href={"/"} className="btn btn-ghost text-xl">
@@ -57,7 +57,16 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer>mingina.com 2025</footer>
+      <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
+        <aside className="grid-flow-col items-center">
+          <Image src={minginaLogo} alt="Mingina Logo" width="40" height="40" />
+          <p>© {new Date().getFullYear()} Mingina. All rights reserved.</p>
+        </aside>
+        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+          <Twitter size={24} />
+          <Github size={24} />
+        </nav>
+      </footer>
     </div>
   );
 }

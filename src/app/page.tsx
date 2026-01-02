@@ -46,33 +46,37 @@ export default function Home() {
           </div>
         </header>
 
-        
-        <div className="flex justify-center flex-col items-center gap-6  mt-20">
-          <div className="flex items-center gap-6">
-            <Image
-              src={minginaLogo}
-              height={200}
-              width={200}
-              alt="Mingina Profile Picture"
-            />
+        <main className="px-6 py-12 md:py-16">
+          <div className="flex flex-col items-center text-center gap-6">
+            <div className="rounded-3xl border border-base-300 bg-base-200 p-6 shadow-sm">
+              <Image
+                src={minginaLogo}
+                height={200}
+                width={200}
+                alt="Mingina Profile Picture"
+                priority
+              />
+            </div>
           </div>
-          <div className="flex items-center flex-col text-center gap-6">
+          <div className="space-y-3">
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
               Hi, I am Mingina
             </h1>
-            <h2 className="text-lg md:text-xl opacity-80">Software Engineer</h2>
+            <p className="text-lg md:text-xl opacity-80">Software Engineer</p>
             <p className="max-w-xl text-sm md:text-base opacity-70 leading-relaxed">
               I like building reliable software that matters over time and
               evolves with use.
             </p>
           </div>
-          <div className="flex flex-row gap-3">
+
+
+          <div className="flex flex-wrap gap-3">
             <Twitter size={24} />
             <Mail size={24} />
             <Github size={24} />
             <FolderDown size={24} />
           </div>
-        </div>
+        </main>
         <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 gap-6">
           <aside className="grid-flow-col items-center">
             <Image

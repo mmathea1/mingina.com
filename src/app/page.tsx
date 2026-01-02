@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import minginaLogo from "../../public/images/file.svg";
+import minginaLogo from "../../public/images/wordmark.svg";
+import minginaIcon from "../../public/images/monogram.svg";
 import {
   FileDown,
   Github,
@@ -12,8 +13,17 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Mingina Portfolio",
+  title: "Mingina Mathea - Software Engineer",
   description: "A portfolio website for Mingina Mathea",
+
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 const LINKS = {
@@ -52,16 +62,13 @@ export default function Home() {
       <div className="w-full max-w-5xl rounded-3xl border border-base-300 bg-base-100 shadow-xl overflow-hidden">
         <header className="flex items-center justify-between px-6 py-4 border-b border-base-300 bg-base-100">
           <Link href={"/"} className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-base-200 border border-base-300">
+            <span className="inline-flex h-12 w-52 items-center justify-center">
               <Image
                 src={minginaLogo}
                 alt="Mingina Logo"
-                width={22}
-                height={22}
+                width={400}
+                height={200}
               />
-              <span className="hidden sm:block font-semibold tracking-tight">
-                Mingina Mathea
-              </span>
             </span>
           </Link>
 
@@ -79,9 +86,9 @@ export default function Home() {
 
         <main className="px-6 py-12 md:py-16">
           <div className="flex flex-col items-center text-center gap-6">
-            <div className="rounded-3xl border border-base-300 bg-base-200 p-6 shadow-sm">
+            <div className="rounded-full border border-base-300 p-6 shadow-sm">
               <Image
-                src={minginaLogo}
+                src={minginaIcon}
                 height={140}
                 width={140}
                 alt="Mingina Profile Picture"
@@ -135,10 +142,11 @@ export default function Home() {
         <footer className="footer sm:footer-horizontal bg-neutral-700 text-neutral-content flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-4 border-t border-base-300">
           <aside className="grid-flow-col items-center">
             <Image
+              className="text-neutral-300"
               src={minginaLogo}
               alt="Mingina Logo"
-              width={22}
-              height={22}
+              width={80}
+              height={80}
             />
             <p>© {new Date().getFullYear()} Mingina. All rights reserved.</p>
           </aside>

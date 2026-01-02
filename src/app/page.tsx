@@ -92,7 +92,7 @@ export default function Home() {
       {/* MAIN - this forces footer to bottom */}
       <main className="flex-1 w-full px-6 flex items-center justify-center">
         <div className="flex flex-col items-center text-center gap-6 max-w-2xl">
-          <div className="rounded-full border border-base-300 p-6 shadow-sm">
+          <div className="rounded-2xl border border-base-300 p-6 shadow-sm">
             <Image
               src={minginaIcon}
               height={140}

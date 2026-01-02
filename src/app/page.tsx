@@ -103,7 +103,7 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <Link
               className="btn btn-primary rounded-2xl"
-              href={LINKS.resumeRequest}
+              href={`mailto:${LINKS.resumeRequest}?subject=Resume Request&body=Hi Mingina, I would like to request a copy of your resume.`}
               target="_blank"
               rel="noopener noreferrer"
             >

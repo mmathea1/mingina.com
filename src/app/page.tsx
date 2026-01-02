@@ -1,7 +1,14 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import minginaLogo from "../../public/images/file.svg";
-import { FolderDown, Github, Mail, Twitter, MapPin } from "lucide-react";
+import {
+  FileDown,
+  Github,
+  Mail,
+  Twitter,
+  MapPin,
+  Linkedin,
+} from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -13,6 +20,7 @@ const LINKS = {
   email: "workwithme@mingina.com",
   github: "https://github.com/mmathea1",
   twitter: "https://x.com/mingina_mathea",
+  linkedin: "https://ke.linkedin.com/in/minginam",
   resumeRequest: "",
 };
 
@@ -99,7 +107,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FolderDown className="h-5 w-5" /> Request Resume
+              <FileDown className="h-5 w-5" /> Request Resume
             </Link>
             <Link
               className="btn btn-outline rounded-2xl"
@@ -114,6 +122,12 @@ export default function Home() {
             </SocialLink>
             <SocialLink href={LINKS.github} label="Follow me on GitHub">
               <Github size={24} />
+            </SocialLink>
+            <SocialLink
+              href={LINKS.linkedin}
+              label="Connect with me on LinkedIn"
+            >
+              <Linkedin size={24} />
             </SocialLink>
           </div>
         </main>
@@ -134,6 +148,12 @@ export default function Home() {
             </SocialLink>
             <SocialLink href={LINKS.github} label="Follow me on GitHub">
               <Github size={18} />
+            </SocialLink>
+            <SocialLink
+              href={LINKS.linkedin}
+              label="Connect with me on LinkedIn"
+            >
+              <Linkedin size={18} />
             </SocialLink>
           </div>
         </footer>

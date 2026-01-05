@@ -62,9 +62,7 @@ export default function Home() {
 
   return (
     <div className="min-h-dvh w-full bg-base-100 flex flex-col">
-      {/* <div className="h-6" /> */}
 
-      {/* HEADER */}
       <header className="w-full border-b border-base-300 bg-base-100">
         <div className="flex items-center justify-between px-6 py-3">
           <Link href="/" className="flex items-center">
@@ -89,7 +87,6 @@ export default function Home() {
         </div>
       </header>
 
-      {/* MAIN - this forces footer to bottom */}
       <main className="flex-1 w-full px-6 flex items-center justify-center">
         <div className="flex flex-col items-center text-center gap-6 max-w-2xl">
           <div className="rounded-2xl border border-base-300 p-6 shadow-sm">
@@ -141,7 +138,6 @@ export default function Home() {
         </div>
       </main>
 
-      {/* FOOTER */}
       <footer className="w-full border-t border-base-300 bg-neutral-700 text-neutral-content">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-6 py-3">
           <aside className="flex items-center gap-2">

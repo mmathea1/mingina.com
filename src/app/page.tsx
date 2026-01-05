@@ -64,8 +64,11 @@ export default function Home() {
     <div className="min-h-dvh w-full bg-base-100 flex flex-col">
 
       <header className="w-full border-b border-base-300 bg-base-100">
-        <div className="flex items-center justify-between px-6 py-3">
-          <Link href="/" className="flex items-center">
+        <div className="flex flex-col sm:flex-row items-center justify-between px-6 py-3">
+          <Link
+            href="/"
+            className="flex items-center md:justify-start sm:justify-center"
+          >
             <Image
               src={minginaLogo}
               alt="Mingina wordmark"
